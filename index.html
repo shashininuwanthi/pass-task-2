@@ -1,0 +1,77 @@
+
+<!--
+    Student ID - 223788652
+    Student Name - Shashini Nuwanthi Ukwaththe Jalathge
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT120 - Pass Task 2</title>
+</head>
+<body>
+
+<h2 style="background-color: blue; color: white; padding: 10px 20px;">SIT120 - Pass Task 2</h2>
+
+<div id="output"></div>
+
+<script>
+    var output = document.getElementById("output");
+    var result = "";
+
+    // a. String methods
+    var str = "Hello, World!";
+    result += "Original String -------------------> " + str + "<br>";
+    result += "Length of the string -------------------> " + str.length + "<br>";
+    result += "Position of 'World'-------------------> " + str.indexOf("World") + "<br>";
+    result += "Extract 'World'-------------------> " + str.slice(7, 12) + "<br>";
+    result += "Uppercase -------------------> " + str.toUpperCase() + "<br>";
+    result += "Lowercase -------------------> " + str.toLowerCase() + "<br><br>";
+
+    // b. Number methods
+    var num = 123.45678;
+    result += "Original Number -------------------> " + num + "<br>";
+    result += "Number to string -------------------> " + num.toString() + "<br>";
+    result += "Rounded to 2 decimal places -------------------> " + num.toFixed(2) + "<br>";
+    result += "Rounded to nearest integer -------------------> " + Math.round(num) + "<br>";
+    result += "Rounded up -------------------> " + Math.ceil(num) + "<br>";
+    result += "Rounded down -------------------> " + Math.floor(num) + "<br><br>";
+
+    // c. Array methods
+    var arr = ["apple", "banana", "cherry", 1, 2, 3];
+    result += "Original Array -------------------> " + arr + "<br>";
+    result += "Length of the array -------------------> " + arr.length + "<br>";
+    result += "Joined with ' - ' -------------------> " + arr.join(" - ") + "<br>";
+    result += "First three elements -------------------> " + arr.slice(0, 3) + "<br>";
+    arr.push("date");
+    result += "After adding 'date' -------------------> " + arr + "<br>";
+    arr.pop();
+    result += "After removing the last element -------------------> " + arr + "<br><br>";
+
+    // d. Date methods
+    var date = new Date();
+    result += "Current Date -------------------> " + date + "<br>";
+    result += "Year -------------------> " + date.getFullYear() + "<br>";
+    result += "Month (0-11) -------------------> " + date.getMonth() + "<br>";
+    result += "Day of the month -------------------> " + date.getDate() + "<br>";
+    result += "Day of the week (0-6) -------------------> " + date.getDay() + "<br><br>";
+
+    // e. Function methods
+    function greet(name) {
+        return "Hello, " + name + "!";
+    }
+    result += "Greeting: " + greet.call(null, "Shashini") + "<br>";
+    
+    function farewell() {
+        return "Goodbye!";
+    }
+    result += "Farewell: " + farewell.apply() + "<br>";
+
+    output.innerHTML = result;
+
+</script>
+
+</body>
+</html>
